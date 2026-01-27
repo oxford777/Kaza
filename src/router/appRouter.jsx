@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router";
+import { Routes, Route } from "react-router-dom";
 
 import Layout from "../components/Layout";
 import Home from "../pages/Home";
@@ -11,8 +11,6 @@ export default function AppRouter() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-
-        {/* Route "catch-all" : toute URL inconnue */}
         <Route path="*" element={<Error404 />} />
       </Routes>
     </Layout>
