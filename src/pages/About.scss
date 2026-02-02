@@ -1,0 +1,24 @@
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+/* espace identique au-dessus et au-dessous */
+.about__collapses {
+  width: 100%;
+  max-width: 1023px;  
+  margin: 40px auto;  /* même espace haut/bas */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;          /* espace entre collapses */
+}
+
+.about__banner {
+  .banner__overlay {
+    opacity: 0.3; /* sur About seulement */
+  }
+}
+
+.banner {
+  margin-bottom: 0;
+}

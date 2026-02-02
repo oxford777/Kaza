@@ -11,9 +11,9 @@ export default function LogementDetail() {
   }
 
   return (
-    <main className="logement-detail">
+    <section className="logement-detail">
       <h1>{logement.title}</h1>
       {}
-    </main>
+    </section>
   );
 }

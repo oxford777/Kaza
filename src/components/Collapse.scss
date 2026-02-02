@@ -1,0 +1,79 @@
+.collapse {
+  width: 100%;
+}
+
+/* le bouton rouge */
+.collapse__header {
+  width: 100%;
+  height: 54px;
+  background: #ff6060;
+  color: #ffffff;
+
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px 0 15px;
+}
+
+/* bouton du chevron UNIQUEMENT */
+.collapse__chevron-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+/* titre */
+.collapse__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;              
+  line-height: 1.43;            
+}
+
+.collapse__chevron {
+  width: 24px;
+  height: 14px;
+  transition: transform 400ms ease;
+}
+
+/* fermé = chevron vers le haut */
+.collapse:not(.open) .collapse__chevron {
+  transform: rotate(0deg);
+}
+
+/* ouvert = chevron vers le bas */
+.collapse.open .collapse__chevron {
+  transform: rotate(-180deg);
+}
+  
+
+/* contenu */
+.collapse__content {
+  background: #f6f6f6;
+  border-radius: 0 0 5px 5px;   
+  color: black;
+
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 15px;              
+  transition: max-height 250ms ease, padding 250ms ease;
+}
+
+/* ouvert */
+.collapse.open .collapse__content {
+  max-height: 200px;            
+  padding: 16px 15px;           
+}
+
+.collapse.open .collapse__content p {
+  margin: 0;
+  font-size: 20px;              
+  line-height: 1.5;
+}

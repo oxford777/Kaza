@@ -2,7 +2,7 @@
 position: relative;
 display: block;
 width: 100%;
-aspect-ratio: 1 / 1; // card carrée //
+aspect-ratio: 1 / 1; /* card carrée */
 border-radius: 10px;
 overflow: hidden;
 text-decoration: none;
@@ -15,7 +15,7 @@ object-fit: cover;
 display: block;
   }
 
-  // dégradé en bas pour lire le texte
+  /* dégradé en bas des card pour lire le texte */
 &::after {
 content: "";
 position: absolute;
@@ -44,7 +44,7 @@ z-index: 1;
 /* MOBILE: cards plus "rectangle" comme la maquette */
 @media (max-width: 767px) {
 .card {
-  aspect-ratio: 335 / 255; // proportion proche de la maquette mobile
+  aspect-ratio: 335 / 255; 
 }
 }
 

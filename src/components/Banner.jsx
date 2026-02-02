@@ -4,7 +4,7 @@ export default function Banner({ image, title }) {
     <section className="banner">
       <img src={image} alt="" className="banner__image" />
       <div className="banner__overlay"></div>
-      <h1 className="banner__title">{title}</h1>
+      {title ? <h1 className="banner__title">{title}</h1> : null}
     </section>
   );
 }
