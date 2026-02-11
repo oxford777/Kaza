@@ -12,8 +12,8 @@ export default function AppRouter() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="*" element={<Error404 />} />
         <Route path="/logement/:id" element={<LogementDetail />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </Layout>
   );

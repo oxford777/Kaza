@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import logements from "../data/logements.json";
+import Slideshow from "../components/Slideshow";
 
 export default function LogementDetail() {
   const { id } = useParams();
@@ -12,8 +13,10 @@ export default function LogementDetail() {
 
   return (
     <section className="logement-detail">
-      <h1>{logement.title}</h1>
-      {}
+      <Slideshow
+      pictures={logement.pictures}
+      title={logement.title}
+    />
     </section>
   );
 }

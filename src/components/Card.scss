@@ -41,10 +41,9 @@ z-index: 1;
 }
 
 
-/* MOBILE: cards plus "rectangle" comme la maquette */
 @media (max-width: 767px) {
 .card {
-  aspect-ratio: 335 / 255; 
+  aspect-ratio: 335 / 255; /* cards plus "rectangle" */
 }
 }
 

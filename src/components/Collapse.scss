@@ -18,7 +18,7 @@
   padding: 0 20px 0 15px;
 }
 
-/* bouton du chevron UNIQUEMENT */
+/* bouton du chevron */
 .collapse__chevron-btn {
   background: none;
   border: none;
@@ -32,7 +32,7 @@
 /* titre */
 .collapse__title {
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 24px;              
   line-height: 1.43;            
 }
@@ -58,22 +58,55 @@
 .collapse__content {
   background: #f6f6f6;
   border-radius: 0 0 5px 5px;   
-  color: black;
-
+ 
   overflow: hidden;
-  max-height: 0;
   padding: 0 15px;              
   transition: max-height 250ms ease, padding 250ms ease;
 }
 
 /* ouvert */
 .collapse.open .collapse__content {
-  max-height: 200px;            
+  max-height: 500px;            
   padding: 16px 15px;           
 }
 
 .collapse.open .collapse__content p {
-  margin: 0;
-  font-size: 20px;              
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 17px;              
   line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+  .collapse__header {
+    height: 30px;          
+    padding: 0 10px;       
+    border-radius: 5px;
+  }
+
+  .collapse__title {
+    font-size: 13px;       
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .collapse__chevron {
+    width: 16px;           
+    height: 9px;
+  }
+
+  .collapse__content {
+    padding: 0 10px;       
+  }
+
+  .collapse.open .collapse__content {
+    padding: 10px;         
+  }
+
+  .collapse.open .collapse__content p {
+    font-size: 12px;       
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
 }
