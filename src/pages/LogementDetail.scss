@@ -1,0 +1,144 @@
+.logement-detail {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;  
+}
+
+.logement-detail__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: 30px;
+}
+
+.logement-detail__left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; 
+}
+
+.logement-detail__title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 500;
+  color: #ff6060;
+  line-height: 1.2;
+}
+
+.logement-detail__location {
+  margin: 0; 
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.logement-detail__tags {
+  margin-top: 14px; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logement-detail__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px; 
+  min-width: 200px;
+}
+
+.logement-detail__host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logement-detail__host-name {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #ff6060;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.logement-detail__host-picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logement-detail__collapses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 76px;
+  margin-top: 10px; 
+  margin-bottom: 45px;
+}
+
+.logement-detail .collapse__title {
+  font-size: 18px;
+}
+
+.logement-detail__equipments {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+
+@media (max-width: 768px) {
+  .logement-detail {
+    gap: 15px;
+  }
+
+  .logement-detail__header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .logement-detail__title {
+  font-size: 18px;
+  }
+
+  .logement-detail .collapse__title {
+  font-size: 13px;
+}
+
+  .logement-detail__equipments {
+  font-size: 12px;
+}
+
+  .logement-detail__location {
+    font-size: 14px;
+  }
+
+  .logement-detail__right {
+    width: 100%;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-width: unset;
+  }
+
+  .logement-detail__host-picture {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logement-detail__host-name {
+    font-size: 12px;
+  }
+
+  .logement-detail__collapses {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,25 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 25px;
+  padding: 0 16px;
+
+  background: #ff6060;
+  color: #fff;
+  border-radius: 10px;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .tag {
+    height: 18px;
+    font-size: 10px;
+    border-radius: 5px;
+    padding: 0 12px;
+  }
+}
