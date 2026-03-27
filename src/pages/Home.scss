@@ -19,24 +19,24 @@ display: flex;
 /* TABLETTE : 2 colonnes */
 @media (max-width: 1023px) {
 .home {
-&__gallery {
-grid-template-columns: repeat(2, 1fr);
-gap: 30px;
-background: transparent;
-padding: 0 ;
+    &__gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    background: transparent;
+    padding: 0 ;
     }
   }
 }
 
 /* MOBILE : 1 colonne */
 @media (max-width: 767px) {
-.home {
-&__gallery {
-grid-template-columns: 1fr;
-gap: 20px;
+  .home {
+    &__gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
 
-background: transparent;
-padding: 0 s;
+    background: transparent;
+    padding: 0 s;
     }
   }
 }

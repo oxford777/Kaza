@@ -1,121 +1,120 @@
 .collapse {
   width: 100%;
-}
 
-/* le bouton rouge */
-.collapse__header {
-  width: 100%;
-  height: 54px;
-  background: #ff6060;
-  color: #ffffff;
-
-  border-radius: 5px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 20px 0 15px;
-}
-
-/* bouton du chevron */
-.collapse__chevron-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  outline: none;
-}
-
-.collapse__chevron-btn:focus {
-  outline: none;
-}
-
-.collapse__chevron-btn:focus-visible { /* accessibilité: contour visible quand naviguation avec Tab*/
-  outline: 2px solid #ffffff;   
-  outline-offset: 2px;
-}
-
-/* titre */
-.collapse__title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 24px;              
-  line-height: 1.4;            
-}
-
-.collapse__chevron {
-  width: 24px;
-  height: 14px;
-  transition: transform 400ms ease;
-}
-
-/* fermé = chevron vers le haut */
-.collapse:not(.open) .collapse__chevron {
-  transform: rotate(0deg);
-}
-
-/* ouvert = chevron vers le bas */
-.collapse.open .collapse__chevron {
-  transform: rotate(-180deg);
-}
-  
-
-/* contenu */
-.collapse__content {
-  background: #f6f6f6;
-  border-radius: 0 0 5px 5px;   
- 
-  overflow: hidden;
-  padding: 0 15px;              
-  transition: max-height 250ms ease, padding 250ms ease;
-}
-
-/* ouvert */
-.collapse.open .collapse__content {
-  max-height: 500px;            
-  padding: 16px 15px;           
-}
-
-.collapse.open .collapse__content p {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 18px;              
-  line-height: 1.5;
-}
-
-
-@media (max-width: 768px) {
-  .collapse__header {
-    height: 30px;          
-    padding: 0 10px;       
+  /* le bouton rouge */
+  &__header {
+    width: 100%;
+    height: 54px;
+    background: #ff6060;
+    color: #ffffff;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 15px;
   }
 
-  .collapse__title {
-    font-size: 13px;       
+  /* bouton du chevron */
+  &__chevron-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    outline: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 2px;
+    }
+  }
+
+  /* titre */
+  &__title {
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    line-height: 1.2;
-  }
-
-  .collapse__chevron {
-    width: 16px;           
-    height: 9px;
-  }
-
-  .collapse__content {
-    padding: 0 10px;       
-  }
-
-  .collapse.open .collapse__content {
-    padding: 10px;         
-  }
-
-  .collapse.open .collapse__content p {
-    font-size: 13px;       
+    font-size: 24px;
     line-height: 1.4;
-    margin-bottom: 8px;
+  }
+
+  &__chevron {
+    width: 24px;
+    height: 14px;
+    transition: transform 400ms ease;
+  }
+
+  /* fermé = chevron vers le haut */
+  &:not(.open) {
+    .collapse__chevron {
+      transform: rotate(0deg);
+    }
+  }
+
+  /* ouvert = chevron vers le bas */
+  &.open {
+    .collapse__chevron {
+      transform: rotate(-180deg);
+    }
+
+    .collapse__content {
+      max-height: 500px;
+      padding: 16px 15px;
+    }
+
+    .collapse__content p {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+
+  /* contenu */
+  &__content {
+    background: #f6f6f6;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    padding: 0 15px;
+    transition: max-height 250ms ease, padding 250ms ease;
+  }
+
+  @media (max-width: 768px) {
+    &__header {
+      height: 30px;
+      padding: 0 10px;
+      border-radius: 5px;
+    }
+
+    &__title {
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    &__chevron {
+      width: 16px;
+      height: 9px;
+    }
+
+    &__content {
+      padding: 0 10px;
+    }
+
+    &.open {
+      .collapse__content {
+        padding: 10px;
+      }
+
+      .collapse__content p {
+        font-size: 13px;
+        line-height: 1.4;
+        margin-bottom: 8px;
+      }
+    }
   }
 }

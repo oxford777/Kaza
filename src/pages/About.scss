@@ -1,32 +1,30 @@
 .about {
   display: flex;
   flex-direction: column;
-}
 
-.about__collapses {
-  width: 100%;
-  max-width: 1023px;  
-  margin: 40px auto;  
-  display: flex;
-  flex-direction: column;
-  gap: 20px;          
-}
+  &__collapses {
+    width: 100%;
+    max-width: 1023px;  
+    margin: 40px auto;  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;          
+  }
 
-.about__banner {
-  .banner__overlay {
-    opacity: 0.3; 
+&__banner {
+    .banner__overlay {
+      opacity: 0.3;
+    }
+  }
+
+@media (max-width: 768px) {
+&__collapses {
+      margin: 20px auto;
+      gap: 10px;
+    }
   }
 }
 
 .banner {
   margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-.about__collapses { 
-  margin: 20px auto;  
-  gap: 10px;          
-}
-
-
 }

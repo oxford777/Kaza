@@ -1,24 +1,24 @@
 .rating {
   display: flex;
   gap: 15px;
-}
 
-.rating__star {
-  width: 24px;
-  height: 24px;
-}
+  &__star {
+    width: 24px;
+    height: 24px;
 
-.rating__star.full {
-  color: #ff6060;
-}
+    &.full {
+      color: #ff6060;
+      }
 
-.rating__star.empty {
-  color: #e3e3e3;
-}
+    &.empty {
+      color: #e3e3e3;
+      }
+  }
 
 @media (max-width: 768px) {
-  .rating__star {
+  &__star {
     width: 18px;
     height: 18px;
+    }
   }
 }
