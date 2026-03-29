@@ -9,10 +9,11 @@ export default function Header() {
         <img className="header__logo" src={logo} alt="Kasa" />
 
         <nav className="header__nav">
-          <NavLink to="/" end>
+          <NavLink to="/" end className="header__link">
             Accueil
           </NavLink>
-          <NavLink to="/about">
+          
+          <NavLink to="/about" className="header__link">
             À propos
           </NavLink>
         </nav>

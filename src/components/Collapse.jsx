@@ -23,11 +23,9 @@ export default function Collapse({ title, children }) {
         </button>
       </div>
 
-      {isOpen && (
-        <div className="collapse__content">
-          {children}
-        </div>
-      )}
+      <div className="collapse__content">
+        {children}
+      </div>
     </div>
   );
 }
