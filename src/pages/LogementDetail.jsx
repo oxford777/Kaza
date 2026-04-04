@@ -4,7 +4,7 @@ import Slideshow from "../components/Slideshow";
 import Collapse from "../components/Collapse";
 import Rating from "../components/Rating";
 import Tag from "../components/Tag";
-import "./LogementDetail.scss";
+import "../style/LogementDetail.scss";
 
 export default function LogementDetail() {
   const { id } = useParams();

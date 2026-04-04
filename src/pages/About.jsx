@@ -1,7 +1,7 @@
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import aboutBanner from "../assets/images/banner-about.png"; 
-import "./About.scss";
+import "../style/About.scss";
 
 const aboutData = [
   { title: "Fiabilité", content: "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes." },

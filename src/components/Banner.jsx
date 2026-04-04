@@ -1,4 +1,4 @@
-import "./Banner.scss";
+import "../style/Banner.scss";
 export default function Banner({ image, title }) {
   return (
     <section className="banner">

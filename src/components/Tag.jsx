@@ -1,4 +1,4 @@
-import "./Tag.scss";
+import "../style/Tag.scss";
 
 export default function Tag({ label }) {
   return <span className="tag">{label}</span>;

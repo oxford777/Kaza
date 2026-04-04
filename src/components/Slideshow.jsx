@@ -1,29 +1,29 @@
 import { useState } from "react";
 import leftChevron from "../assets/icons/chevron-left.svg";
 import rightChevron from "../assets/icons/chevron-right.svg";
-import "./Slideshow.scss";
+import "../style/Slideshow.scss";
 
-export default function Slideshow({ pictures, title = "Photo du logement" }) {
-  const [current, setCurrent] = useState(0);
+export default function Slideshow({ pictures, title = "Photo du logement" }) { 
+  const [current, setCurrent] = useState(0); 
 
-  if (!pictures || pictures.length === 0) return null;
+  if (!pictures || pictures.length === 0) return null; 
 
-  const total = pictures.length;
-  const showControls = total > 1;
+  const total = pictures.length; 
+  const showControls = total > 1; 
 
-  const Next = () => setCurrent((i) => (i + 1) % total);
-  const Prev = () => setCurrent((i) => (i - 1 + total) % total);
+  const Next = () => setCurrent((i) => (i + 1) % total); 
+  const Prev = () => setCurrent((i) => (i - 1 + total) % total); 
 
-  return (
+  return ( 
     <div className="slideshow">
       <img
         className="slideshow__image"
-        src={pictures[current]}
+        src={pictures[current]}  
         alt={`${title} - ${current + 1}`}
       />
 
-      {showControls && (
-        <>
+      {showControls && ( 
+        <> 
           <button
             type="button"
             className="slideshow__arrow slideshow__arrow--left"
@@ -45,7 +45,7 @@ export default function Slideshow({ pictures, title = "Photo du logement" }) {
           </button>
 
           <div className="slideshow__counter">
-            {current + 1}/{total}
+            {current + 1}/{total} 
           </div>
         </>
       )}
